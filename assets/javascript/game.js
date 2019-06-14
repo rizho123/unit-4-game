@@ -7,7 +7,7 @@ var jwl2 = Math.floor((Math.random() * 30) + 1)
 var jwl3 = Math.floor((Math.random() * 10) + 1)
 var jwl4 = Math.floor((Math.random() * 50) + 1)
 
-var target = Math.floor((Math.random()*10)+100)
+var target = Math.floor((Math.random()*100)+100)
 var userTotal = 0;
 
 $("#target").text(target);
@@ -58,7 +58,7 @@ function reset() {
     jwl2 = Math.floor((Math.random() * 30) + 1)
     jwl3 = Math.floor((Math.random() * 10) + 1)
     jwl4 = Math.floor((Math.random() * 50) + 1)
-    target = Math.floor((Math.random()*10)+10)
+    target = Math.floor((Math.random()*100)+100)
     userTotal = 0;
     $("#userTotal").text(userTotal);
     $("#target").text(target);
