@@ -11,6 +11,7 @@ var target = Math.floor((Math.random()*100)+100)
 var userTotal = 0;
 
 $("#target").text(target);
+$("#userTotal").text(userTotal);
 
 $(document).ready(function() {
     $('#jwl1').on ('click', function(){
@@ -44,6 +45,10 @@ function check() {
     if (userTotal === target) {
         wins++
         $("#wins").text(wins);
+        $("#status").text("You win!")
+        setTimeout(function(){
+            document.getElementById("status").innerHTML = "Status";
+        }, 3000)
         reset()
     }
     else if (userTotal > target) {

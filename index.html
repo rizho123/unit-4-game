@@ -21,7 +21,7 @@
             <div class="header">
                 <h2>Instructions:</h2>
                 <p>The value of each jewel is randomized every round and won't be shown.</p>
-                <p>The main goal is to add the values of each jewel to match the target number without going over. </p>
+                <p>The main goal is to add the values of each jewel to match the target number exactly without going over. </p>
             </div>
             <br>
             <!-- Page 1: Game Screen -->
@@ -30,9 +30,10 @@
                     <p>Wins: <strong><span id="wins"></span></strong></p>
                     <p>Losses: <strong><span id="losses"></span></strong></p>
                 </div>
-
+                <div id="otherStats">
                 <p>Target Number: <span id="target"></span></p>
                 <p>Your current total: <strong><span id="userTotal"></span></strong></p>
+                </div>
             </div>
             <hr>
             <div class="imgboard"> 
@@ -41,7 +42,10 @@
                 <img class="jewels" id="jwl3" src="assets/images/jewel3a.png">
                 <img class="jewels" id="jwl4" src="assets/images/jewel4.jpg">
             </div>
-        </div>
+            <br>
+            <div class="bground">
+                <h1 class="title" id="status">Status</h1>
+            </div>
 
         <script type="text/javascript" src="assets/javascript/game.js"></script>
     </body>
