@@ -1,8 +1,82 @@
 .container {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid red;
+    background-color: #4e4e4e09;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 50px;
+    background: url("../images/granite.jpg");
+    background-size: 100%;
 }
 
-h1, h2 {
+.bground {
+    background-color: #d400ff63;
+}
+
+h1, .header, .scoreboard {
+    padding: 10px;
+}
+
+h1 {
     text-align: center;
+    font-size: 50px;
+}
+
+.header {
+    background-color: #ff00005d;
+}
+
+.scoreboard {
+    background-color: #00e1ff57;
+}
+
+.bground, .scoreboard, .header {
+    border-radius: 10px;
+}
+
+.title {
+    font-family: Righteous;
+    color: #00e1ff81;
+    background: url("../images/sparkle.gif");
+    background-size: 50%;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: 2px; 
+    text-shadow: 0 0 15px;
+}
+
+.jewels {
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+    max-height: 110px;
+    object-fit: cover;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 4px #000000;
+}
+
+.scoreboard, .header {
+    font-family: Righteous;
+    font-size: 20px;
+}
+
+.imgboard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 55%;
+}
+
+.jewels:hover {
+    filter: contrast(150%);
+}
+
+.jewels:active {
+    filter: contrast(250%);
 }

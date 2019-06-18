@@ -8,36 +8,38 @@
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href=> <!--Needs font-->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        
+        <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Baloo|Monoton|Poiret+One|Righteous&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">
-            <h1>Jewel Game</h1>
-
+            <div class="bground">
+            <h1 class="title">Jewel Game</h1>
+            </div>
+            <br>
             <!-- Page 0: Directions -->
             <div class="header">
                 <h2>Instructions:</h2>
                 <p>The value of each jewel is randomized every round and won't be shown.</p>
                 <p>The main goal is to add the values of each jewel to match the target number without going over. </p>
             </div>
-            
+            <br>
             <!-- Page 1: Game Screen -->
             <div class="scoreboard">
                 <div id="userStats">
-                    <p>W: <strong><span id="wins"></span></strong></p>
-                    <p>L: <strong><span id="losses"></span></strong></p>
+                    <p>Wins: <strong><span id="wins"></span></strong></p>
+                    <p>Losses: <strong><span id="losses"></span></strong></p>
                 </div>
 
                 <p>Target Number: <span id="target"></span></p>
                 <p>Your current total: <strong><span id="userTotal"></span></strong></p>
-                <hr>
-                <div class="imgboard">
-                    <img class="jewels" id="jwl1" src="assets/images/jewel1.png">
-                    <img class="jewels" id="jwl2" src="assets/images/jewel2.png">
-                    <img class="jewels" id="jwl3" src="assets/images/jewel3.png">
-                    <img class="jewels" id="jwl4" src="assets/images/jewel4.png">
-                </div>
+            </div>
+            <hr>
+            <div class="imgboard"> 
+                <img class="jewels" id="jwl1" src="assets/images/jewel1.jpg">
+                <img class="jewels" id="jwl2" src="assets/images/jewel2.jpg">
+                <img class="jewels" id="jwl3" src="assets/images/jewel3a.png">
+                <img class="jewels" id="jwl4" src="assets/images/jewel4.jpg">
             </div>
         </div>
 
