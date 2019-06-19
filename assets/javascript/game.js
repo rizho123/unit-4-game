@@ -1,7 +1,7 @@
 
 var wins = 0;
 var losses = 0;
-
+var round = 1;
 var jwl1 = Math.floor((Math.random() * 20) + 1)
 var jwl2 = Math.floor((Math.random() * 30) + 1)
 var jwl3 = Math.floor((Math.random() * 10) + 1)
@@ -10,9 +10,9 @@ var jwl4 = Math.floor((Math.random() * 50) + 1)
 var target = Math.floor((Math.random()*100)+100)
 var userTotal = 0;
 
-$("#target").text(target);
-$("#userTotal").text(userTotal);
-
+$("#target").text(target)
+$("#userTotal").text(userTotal)
+$("#round").text(" " + round)
 $(document).ready(function() {
     $('#jwl1').on ('click', function(){
         sumTotal(jwl1);
@@ -46,16 +46,25 @@ function check() {
         wins++
         $("#wins").text(wins);
         $("#status").text("You win!")
-        setTimeout(function(){
-            document.getElementById("status").innerHTML = "Status";
-        }, 3000)
-        reset()
+        newRound()
     }
     else if (userTotal > target) {
         losses++
         $("#losses").text(losses);
-        reset()
+        $("#status").text("You lose!")
+        newRound()
+        console.log("After losing: " + round)
     }
+}
+
+function newRound() {
+    setTimeout(function(){
+        document.getElementById("status").innerHTML = "Round: " + round;
+    }, 3000)
+    round = round + 1;
+    $("#round").text(round)
+    console.log("Within newRound func: " + round)
+    reset()
 }
 
 function reset() {
@@ -69,7 +78,19 @@ function reset() {
     $("#target").text(target);
 }
 
+function resetButton() {
+    reset()
+    round = 1;
+    document.getElementById("status").innerHTML = "Round: " + round;
+    console.log("RESET:" + round)
+}
 
+$("#reset").on("click", function(){
+    resetButton()
+    console.log("On Click event: " + round)
 })
+});
+
+
 
 

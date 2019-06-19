@@ -19,9 +19,10 @@
             <br>
             <!-- Page 0: Directions -->
             <div class="header">
-                <h2>Instructions:</h2>
+                <h2>Instructions</h2>
                 <p>The value of each jewel is randomized every round and won't be shown.</p>
                 <p>The main goal is to add the values of each jewel to match the target number exactly without going over. </p>
+                <p>The <span class = "specColor">RESET</span> button will reset the Target Number, your current total, your Wins & Losses, and the number of rounds.</p>
             </div>
             <br>
             <!-- Page 1: Game Screen -->
@@ -34,6 +35,9 @@
                 <p>Target Number: <span id="target"></span></p>
                 <p>Your current total: <strong><span id="userTotal"></span></strong></p>
                 </div>
+                <div id="reset">
+                    <p class="reset">RESET</p>
+                </div>
             </div>
             <hr>
             <div class="imgboard"> 
@@ -44,9 +48,9 @@
             </div>
             <br>
             <div class="bground">
-                <h1 class="title" id="status">Status</h1>
+                <h1 class="title2" id="status">Round:<span id="round"></span></h1>
             </div>
-
+        </div>
         <script type="text/javascript" src="assets/javascript/game.js"></script>
     </body>
 </html>

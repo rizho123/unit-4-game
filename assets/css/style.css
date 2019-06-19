@@ -34,6 +34,11 @@ h1 {
     font-size: 50px;
 }
 
+h2 {
+    text-align: center;
+    text-decoration: underline overline;
+}
+
 .header {
     background-color: #ff00005d;
 }
@@ -46,15 +51,38 @@ h1 {
     background-color: #ffe60057;
 }
 
-.bground, #userStats, #otherStats, .header {
+#reset {
+    background-color: #ff000057;
+}
+
+#reset:active {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+    color: white;
+}
+
+.bground, #userStats, #otherStats, .header, #reset {
     border-radius: 10px;
     border: 2px solid #000000;
 }
 
 .title {
     font-family: Righteous;
-    color: #00e1ffa1;
+    color: #00e1ffbd;
     background: url("../images/sparkle.gif");
+    background-size: 50%;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: 2px; 
+    text-shadow: 0 0 15px;
+}
+
+.title2 {
+    font-family: Righteous;
+    color: #5eff00b0;
+    background: url("../images/sparkle2.gif");
     background-size: 50%;
     background-position: center;
     -webkit-background-clip: text;
@@ -109,12 +137,12 @@ h1 {
     text-align: center;
 }
 
-#userStats, #otherStats {
+#userStats, #otherStats, #reset {
     width: 300px;
     display: inline-block;
 }
 
-#target {
+#target, .specColor {
     color: #ff0000;
 }
 
