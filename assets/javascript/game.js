@@ -10,9 +10,6 @@ var jwl4 = Math.floor((Math.random() * 50) + 1)
 var target = Math.floor((Math.random()*100)+100)
 var userTotal = 0;
 
-$("#target").text(target)
-$("#userTotal").text(userTotal)
-$("#round").text(" " + round)
 $(document).ready(function() {
     $('#jwl1').on ('click', function(){
         sumTotal(jwl1);
@@ -57,6 +54,21 @@ function check() {
     }
 }
 
+function bgnGame () {
+    $("#target").text(target)
+    $("#userTotal").text(userTotal)
+    $("#round").text(" " + round)
+}
+
+bgnGame()
+
+function userStats () {
+    $("#wins").text(wins)
+    $("#losses").text(losses)
+}
+
+userStats()
+
 function newRound() {
     setTimeout(function(){
         document.getElementById("status").innerHTML = "Round: " + round;
@@ -81,6 +93,9 @@ function reset() {
 function resetButton() {
     reset()
     round = 1;
+    wins = 0;
+    losses = 0;
+    userStats()
     document.getElementById("status").innerHTML = "Round: " + round;
     console.log("RESET:" + round)
 }
